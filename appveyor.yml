@@ -18,5 +18,5 @@ test_script:
 - gvm version
 - gvm list
 - mono --version
-- clang-9 --version
-- clang-10 --version
+- if command -v sshd > /dev/null; then clang-9 --version; else echo "clang-9 is not installed"; fi
+- if command -v sshd > /dev/null; then clang-10 --version; else echo "clang-10 is not installed"; fi

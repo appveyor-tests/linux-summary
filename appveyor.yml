@@ -49,7 +49,7 @@ test_script:
     # browsers
     tools_array+=( "firefox" "google-chrome-stable" )
     
-    dpkg -l "${tools_array[@]}"
+    dpkg -l "${tools_array[@]}" --showformat="${Package}\t${Version}\n"
 - redis-server --version
 - vcpkg version
 - cmake --version

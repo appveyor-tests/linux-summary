@@ -13,3 +13,5 @@ test_script:
 - svn --version
 - dotnet --list-sdks
 - dotnet --list-runtimes
+- nvm --version
+- nvm list

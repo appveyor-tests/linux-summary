@@ -31,7 +31,15 @@ test_script:
 - ls ~/venv*
 - erl -eval '{ok, Version} = file:read_file(filename:join([code:root_dir(), "releases", erlang:system_info(otp_release), "OTP_VERSION"])), io:fwrite(Version), halt().' -noshell
 - yarn --version
-- 7za
-- tcl --version
 - curl --version
 - wget --version
+- sh: |
+    declare tools_array
+    # utilities
+    tools_array=( "zip" "unzip" "wget" "curl" "time" "tree" "telnet" "dnsutils" "net-tools" "file" "ftp" "lftp" )
+    tools_array+=( "p7zip-rar" "p7zip-full" "debconf-utils" "stress" "rng-tools"  "dkms" "dos2unix" )
+
+    # build tools
+    tools_array+=( "make" "binutils" "bison" "gcc" "tcl" "pkg-config" "ninja-build" )
+    tools_array+=( "ant" "ant-optional" "maven" "gradle" "nuget" "graphviz" )
+    dpkg -l "${tools_array[@]}"

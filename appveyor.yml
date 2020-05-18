@@ -17,3 +17,6 @@ test_script:
 - nvm list
 - gvm version
 - gvm list
+- mono --version
+- clang-9 --version
+- clang-10 --version

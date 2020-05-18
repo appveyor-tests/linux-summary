@@ -36,6 +36,14 @@ test_script:
 - yarn --version
 - curl --version
 - wget --version
+- redis-server --version
+- vcpkg version
+- cmake --version
+- packer --version
+- aws --version
+- az --version
+- gcloud --version
+- localstack --version
 - sh: |
     declare tools_array
     # utilities
@@ -53,11 +61,3 @@ test_script:
     tools_array+=( "firefox" "google-chrome-stable" )
     
     dpkg-query -W -f='${binary:Package}\t\t${Version}\n' "${tools_array[@]}"
-- redis-server --version
-- vcpkg version
-- cmake --version
-- packer --version
-- aws --version
-- az --version
-- gcloud --version
-- localstack --version

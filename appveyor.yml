@@ -4,3 +4,12 @@ build: off
 
 test_script:
 - lsb_release -a
+- pwsh --version
+- docker version
+- docker info
+- git --version
+- git lfs version
+- hg --version
+- svn --version
+- dotnet --list-sdks
+- dotnet --list-runtimes

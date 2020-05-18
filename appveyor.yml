@@ -42,4 +42,12 @@ test_script:
     # build tools
     tools_array+=( "make" "binutils" "bison" "gcc" "tcl" "pkg-config" "ninja-build" )
     tools_array+=( "ant" "ant-optional" "maven" "gradle" "nuget" "graphviz" )
+    
+    # servers
+    tools_array+=( "rabbitmq-server" "mysql-server" "mongodb-org" "postgresql" "mssql-server" )
+    
+    # browsers
+    tools_array+=( "firefox" "google-chrome-stable" )
+    
     dpkg -l "${tools_array[@]}"
+- redis-server --version

@@ -1,4 +1,7 @@
-image: ubuntu1804
+image:
+- ubuntu1604-master
+- ubuntu1804-master
+- ubuntu2004-master
 
 build: off
 

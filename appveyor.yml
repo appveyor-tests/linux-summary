@@ -57,3 +57,4 @@ test_script:
 - aws --version
 - az --version
 - gcloud --version
+- localstack --version

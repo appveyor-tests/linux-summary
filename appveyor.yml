@@ -22,9 +22,16 @@ test_script:
 - if command -v clang-10 > /dev/null; then clang-10 --version; else echo "clang-10 is not installed"; fi
 - if command -v gcc-9 > /dev/null; then gcc-9 --version; else echo "gcc-9 is not installed"; fi
 - if command -v gcc-8 > /dev/null; then gcc-8 --version; else echo "gcc-8 is not installed"; fi
-- if command -v gcc-9 > /dev/null; then gcc-7 --version; else echo "gcc-7 is not installed"; fi
+- if command -v gcc-7 > /dev/null; then gcc-7 --version; else echo "gcc-7 is not installed"; fi
 - if command -v gcc-6 > /dev/null; then gcc-6 --version; else echo "gcc-6 is not installed"; fi
 - if command -v gcc-5 > /dev/null; then gcc-5 --version; else echo "gcc-5 is not installed"; fi
 - if command -v gcc-4 > /dev/null; then gcc-4 --version; else echo "gcc-4 is not installed"; fi
 - rvm --version
 - rvm list
+- ls ~/venv*
+- erl -eval '{ok, Version} = file:read_file(filename:join([code:root_dir(), "releases", erlang:system_info(otp_release), "OTP_VERSION"])), io:fwrite(Version), halt().' -noshell
+- yarn --version
+- 7za --version
+- tcl --version
+- curl --version
+- wget --version

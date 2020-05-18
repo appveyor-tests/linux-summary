@@ -26,3 +26,5 @@ test_script:
 - if command -v gcc-6 > /dev/null; then gcc-6 --version; else echo "gcc-6 is not installed"; fi
 - if command -v gcc-5 > /dev/null; then gcc-5 --version; else echo "gcc-5 is not installed"; fi
 - if command -v gcc-4 > /dev/null; then gcc-4 --version; else echo "gcc-4 is not installed"; fi
+- rvm --version
+- rvm list

@@ -49,8 +49,7 @@ test_script:
     # browsers
     tools_array+=( "firefox" "google-chrome-stable" )
     
-    dpkg-query --showformat="${Package}\t${Version}\n" --show "${tools_array[@]}"
-    dpkg-query -W -f='${binary:Package} ${Version}\t${Maintainer}\n' dpkg
+    dpkg-query -W -f='${binary:Package} ${Version}\n' "${tools_array[@]}"
 - redis-server --version
 - vcpkg version
 - cmake --version

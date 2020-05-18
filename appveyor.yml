@@ -1,0 +1,6 @@
+image: ubuntu1804
+
+build: off
+
+test_script:
+- lsb_release -a

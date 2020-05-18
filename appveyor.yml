@@ -15,5 +15,5 @@ test_script:
 - dotnet --list-runtimes
 - nvm --version
 - nvm list
-- gvm --version
+- gvm version
 - gvm list

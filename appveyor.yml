@@ -51,7 +51,7 @@ test_script:
     
     dpkg -l "${tools_array[@]}"
 - redis-server --version
-- vcpkg --version
+- vcpkg version
 - cmake --version
 - packer --version
 - aws --version

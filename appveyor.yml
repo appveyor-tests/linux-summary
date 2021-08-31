@@ -43,7 +43,7 @@ test_script:
 - aws --version
 - az --version
 - gcloud --version
-- localstack --version
+#- localstack --version
 - sh: |
     declare tools_array
     # utilities
